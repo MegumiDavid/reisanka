@@ -1,5 +1,13 @@
 import './globals.css'
 
+import { Open_Sans } from '@next/font/google'
+
+const opensans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+  variable: '--font-opensans'
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -12,7 +20,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className={`${opensans.variable} font-sans`}>{children}</body>
     </html>
   )
 }

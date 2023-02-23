@@ -1,0 +1,34 @@
+'use client'
+
+import React from 'react'
+import { Sofia_Sans } from '@next/font/google'
+import Link from 'next/link'
+import { HiMenu } from 'react-icons/hi'
+import { useAtom } from 'jotai'
+import sidebarAtom from '../states/sidebarAtom'
+
+const opensans = Sofia_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-sofiasans'
+})
+
+export default function Logo() {
+  const [isOpen, setIsOpen] = useAtom(sidebarAtom)
+  return (
+    <div className={`${opensans.variable} font-mono flex align-middle mt-8 mx-10`}>
+      <button className='cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
+        <HiMenu className='text-3xl mr-4 mt-[8px] text-white'/>
+      </button>
+      <Link href='/' className='relative'>
+      <div className='relative z-0'>
+        <div className='w-12 h-12 bg-dark-500 rounded-full absolute top-0 left-0'></div>
+        <div className='w-12 h-12 bg-dark-500 rounded-full absolute top-1 left-3'></div>
+      </div>
+      <div className='absolute left-6 top-[8px]'>
+        <div className='font-normal text-3xl text-white'>Reisanka</div>
+      </div>
+      </Link>
+    </div>
+  )
+}
