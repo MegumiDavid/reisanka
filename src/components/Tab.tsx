@@ -94,11 +94,18 @@ export function HymnCard(props: HymnCardProps) {
     selectHymn: state.selectHymn
   }))
 
+  const { toggleIsOpen } = useTabOpenStore(state => ({
+    toggleIsOpen: state.toggleIsOpen
+  }))
+
   const isCurrHymn = currentHymn.id === props.id
 
   return (
     <div
-      onClick={() => selectHymn(props.id)}
+      onClick={() => {
+        toggleIsOpen()
+        selectHymn(props.id)
+      }}
       className={twMerge(
         'w-full px-4 py-3 rounded-lg flex cursor-pointer transition-all duration-500',
         isCurrHymn ? 'bg-white' : 'bg-primary-700'
