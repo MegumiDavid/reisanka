@@ -28,7 +28,9 @@ export function Stanza(props: StanzaProps) {
       <Show when={props.title}>
         <p className="italic text-gray-500 font-light mb-1">({props.title!})</p>
       </Show>
-      <p>{props.lyric}</p>
+      {props.lyric.map(line => (
+        <p>{line}</p>
+      ))}
     </div>
   )
 }
