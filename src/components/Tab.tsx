@@ -48,13 +48,10 @@ export function Tab() {
       <LogoMenu isTabOpen={true} />
       <Input state={search} setState={setSearch} />
 
-      <div className="flex flex-col gap-3 mt-3 h-[85%] overflow-y-auto scrollbar-hide rounded-lg">
+      <div className="flex flex-col gap-3 mt-3 h-[82.5vh] overflow-y-auto scrollbar-hide rounded-lg">
         {filteredHymns.map(hymn => (
           <HymnCard key={hymn.id} id={hymn.id} number={hymn.number} title={hymn.title} />
         ))}
-        {/* {Array.from({ length: 50 }).map((_, index) => (
-          <HymnCard key={Math.random().toString(36)} id={`${index + 1}`} number={index + 1} title={'a'} />
-        ))} */}
       </div>
     </div>
   )
@@ -107,7 +104,7 @@ export function HymnCard(props: HymnCardProps) {
         selectHymn(props.id)
       }}
       className={twMerge(
-        'w-full px-4 py-3 rounded-lg flex cursor-pointer transition-all duration-500',
+        'w-full px-4 py-3 rounded-lg flex items-center cursor-pointer transition-all duration-500',
         isCurrHymn ? 'bg-white' : 'bg-primary-700'
       )}
     >
@@ -116,7 +113,7 @@ export function HymnCard(props: HymnCardProps) {
       </div>
       <div
         className={twMerge(
-          'text-lg font-semibold mt-[16px] w-3/4 leading-6 transition-all duration-500',
+          'text-lg font-semibold w-3/4 leading-6 transition-all duration-500',
           isCurrHymn ? 'text-black' : 'text-white'
         )}
       >

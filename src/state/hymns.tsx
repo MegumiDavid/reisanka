@@ -423,7 +423,7 @@ export const hymns: HymnsType = [
       {
         lyric: [
           'CHEGANDO O SENHOR, AS NÉSCIAS SE LEVANTARAM,',
-          'MAS AS L MPADAS NÃO SE ACENDERAM E CHORARAM NA ESCURIDÃO.'
+          'MAS AS LÂMPADAS NÃO SE ACENDERAM E CHORARAM NA ESCURIDÃO.'
         ]
       },
       {
@@ -531,7 +531,7 @@ export const hymns: HymnsType = [
           'A VINDA DO SENHOR JESUS PRÓXIMA JÁ ESTÁ.',
           'PREPARADOS JÁ ESTAIS, MEUS AMADOS IRMÃOS?',
           'JÁ SOBRE AS NUVENS ESTÃO OS SEUS ANJOS.',
-          'COMO REL MPAGO VIRÁ O NOSSO SENHOR JESUS.',
+          'COMO RELÂMPAGO VIRÁ O NOSSO SENHOR JESUS.',
           'PREPARAI-VOS, PREPARAI-VOS PARA ESSE GRANDE DIA.',
           'DISPONDO-VOS DO AZEITE, ESPERAI PELO SENHOR.'
         ]
